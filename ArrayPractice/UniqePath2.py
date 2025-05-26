@@ -21,7 +21,7 @@ def findUniqePath(obstacleGrid):
     path=[0]
     findPath(0,0, obstacleGrid, move, path)
     return path[0]
-obstacleGrid = [[0,0,0],[0,0,0],[0,0,0]]
+obstacleGrid = [[1]]
 print(findUniqePath(obstacleGrid))
         
 
