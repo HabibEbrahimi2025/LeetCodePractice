@@ -4,7 +4,6 @@ def findUniqePath(obstacleGrid):
             return False
         if arr[i][j]==1:
             return False
-        
         return True
     
     def findPath(x1,y1,obstacleGrid, move,path):
