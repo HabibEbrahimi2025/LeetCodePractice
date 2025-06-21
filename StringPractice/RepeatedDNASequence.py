@@ -9,6 +9,6 @@ def repeatedDNA(s):
             repated.add(seqeunce)
         else:
             seen.add(seqeunce)
-    print(repated)
+    return repated
 s="AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT"
 repeatedDNA(s)
