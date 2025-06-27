@@ -14,5 +14,5 @@ def uniqueSubset(nums):
     return nums2
 
 nums = [1,2,3]
-uniqueSubset(nums)
+print(uniqueSubset(nums))
 
