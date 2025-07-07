@@ -1,9 +1,6 @@
 def combine(n, k):
     if n==0:
         return 0
-    # if n==1:
-    #     return 1
-    
     def backtracking(start, word, path, allPath):
         if len(path)==k:
             allPath.append(path[:])
@@ -15,7 +12,7 @@ def combine(n, k):
     word=[x for x in range(1,n+1)]
     allPath=[]
     backtracking(0, word, [], allPath)
-    print(allPath)
+    return allPath
 n=1
 k=1
 combine(n,k)
