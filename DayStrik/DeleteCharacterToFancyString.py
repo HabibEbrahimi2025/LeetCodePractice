@@ -1,9 +1,7 @@
 def fancyString(s):
     if len(s)<2:
         return s
-    
     i=0
-
     result=[]
     while i<len(s):
         j=1
