@@ -13,8 +13,6 @@ def countNumberUnique(n):
         total+=product
         avialable-=1
     return total
-
-    
 print(countNumberUnique(3))
 
     
