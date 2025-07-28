@@ -13,7 +13,7 @@ def findOrginalString(word):
             i=j
         res+=count
     return res
-word = "aaabcd"
+word = "aabbbbtttt"
 print(findOrginalString(word))
 
 

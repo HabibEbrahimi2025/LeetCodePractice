@@ -1,3 +1,17 @@
+'''
+Given an m x n integer matrix matrix, if an element is 0, set its entire row and column to 0's.
+
+You must do it in place.
+
+ 
+
+Example 1:
+
+
+Input: matrix = [[1,1,1],[1,0,1],[1,1,1]]
+Output: [[1,0,1],[0,0,0],[1,0,1]]
+'''
+
 def setZeros(matrix):
     rows, cols = len(matrix), len(matrix[0])
     first_row_has_zero = any(matrix[0][j] == 0 for j in range(cols))
