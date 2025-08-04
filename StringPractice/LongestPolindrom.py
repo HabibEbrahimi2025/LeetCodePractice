@@ -16,7 +16,7 @@ def LongestPolindrom(s):
                 if len(s[i:j+1])>len(finalRes):
                     finalRes=s[i:j+1]
     return finalRes
-print(LongestPolindrom("aaaaaaaaaaaaaa"))
+print(LongestPolindrom("abcddcbaaakkkaaa"))
 
 
 
@@ -48,7 +48,7 @@ def expandAroundCenter(s, left, right):
     # Return the length of the palindrome
     return right - left - 1
 
-print(longestPalindrome("aabcddcbaahhaa"))
+#print(longestPalindrome("aabcddcbaahhaa"))
 
 
 
