@@ -23,7 +23,6 @@ class Solution():
     
     def createByArray(self,arr):
         self.root=TreeNode(arr[0])
-
         i=1
         que=deque([self.root])
         while que:
@@ -31,9 +30,11 @@ class Solution():
             
             if i<len(arr) and arr[i]:
                 node.left=TreeNode(arr[i])
+                que.append(node.left)
             i+=1
             if i<len(arr) and arr[i]:
                 node.right=TreeNode(arr[i])
+                que.append(node.right)
             i+=1
     
     def levelDisplay(self):
@@ -61,16 +62,16 @@ def isSameTree(p: TreeNode, q: TreeNode) -> bool:
     if p.val != q.val:
         return False
     return isSameTree(p.left, q.left) and isSameTree(p.right, q.right)
-p = [1,2,3]
-q = [1,2,3]
+p = [1,2,2,3,4,4,3]
+# q = [1,2,3]
 ob1=Solution()
 ob1.createByArray(p)
 ob1.levelDisplay()
-print("The second part")
-ob2=Solution()
-ob2.createByArray(q)
-ob2.levelDisplay()
+# print("The second part")
+# ob2=Solution()
+# ob2.createByArray(q)
+# ob2.levelDisplay()
 
-print(isSameTree(ob1.root, ob2.root))
+# print(isSameTree(ob1.root, ob2.root))
 
 
