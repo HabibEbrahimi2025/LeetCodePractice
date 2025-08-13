@@ -16,3 +16,5 @@ def maxProfit(prices):
 
     return max(sold[-1], rest[-1])
 print(maxProfit([1,2,3,0,2]))
+
+
