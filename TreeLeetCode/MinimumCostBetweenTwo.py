@@ -1,3 +1,14 @@
+'''
+Given the root of a Binary Search Tree (BST), return the minimum difference between the values of any two different nodes in the tree.
+
+ 
+
+Example 1:
+
+
+Input: root = [4,2,6,1,3]
+Output: 1
+'''
 from collections import deque
 class TreeNode():
     def __init__(self, value, left=None, right=None):
@@ -48,17 +59,17 @@ def arrayToBST(arr):
 #     return minDist
 
 def minimumDistance(root):
-    prev=None
-    minDist=float('inf')
+    holder=[]
     def helper(root):
-        nonlocal prev,minDist
         if root:
             helper(root.left)
-            if prev:
-                minDist=min(minDist, root.val-prev)
-            prev=root.val
+            holder.append(root.val)
             helper(root.right)
     helper(root)
+    minDist=float('inf')
+    for i in range(len(holder)-1):
+        for j in range(i+1, len(holder)):
+            minDist=min(abs(holder[i]-holder[i+1]), minDist)
     return minDist
 
 
