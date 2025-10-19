@@ -21,6 +21,6 @@ def coinChange(coins, amount):
         return -1
     
      
-coins = [2]
-amount = 3
+coins = [4,5,6,7]
+amount = 4
 print(coinChange(coins, amount))
